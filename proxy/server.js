@@ -3,7 +3,9 @@ const fetch = require('node-fetch');
 const cors = require('cors');
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));;
 
 const GH_KEY = process.env.GREENHOUSE_API_KEY;
 const BASE = 'https://harvest.greenhouse.io/v1';
